@@ -1,4 +1,5 @@
 //@flow
+// $FlowIgnore
 import { fork } from 'redux-saga/effects'
 import watchSagaExample from './Example'
 

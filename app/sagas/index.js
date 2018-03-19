@@ -1,4 +1,5 @@
 //@flow
+// $FlowIgnore
 import { all } from 'redux-saga/effects'
 import exampleSagas from 'sagas/example'
 

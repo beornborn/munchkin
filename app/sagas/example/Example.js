@@ -1,4 +1,5 @@
 //@flow
+// $FlowIgnore
 import { takeEvery, call } from 'redux-saga/effects'
 // import * as api from 'api'
 import { SAGA_AUTHENTICATE } from 'reducers/Saga'

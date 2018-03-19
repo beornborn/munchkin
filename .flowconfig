@@ -7,3 +7,5 @@
 
 [options]
 module.system.node.resolve_dirname=app
+
+suppress_comment= \\(.\\|\n\\)*\\$FlowIgnore
