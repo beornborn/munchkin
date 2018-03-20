@@ -8,3 +8,8 @@ export const palette = {
   text: '#363636',
   link: '#2e91f3',
 }
+
+// breakpoints
+export const bp = {
+  average: 799,
+}

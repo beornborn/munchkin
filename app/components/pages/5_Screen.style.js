@@ -19,4 +19,6 @@ export const Cta = styled.a`
   color: ${palette.link};
   letter-spacing: 1px;
   margin-left: 20px;
+  border: 3px dashed red;
+  padding: 0px 30px;
 `

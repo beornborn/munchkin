@@ -1,11 +1,15 @@
 //@flow
 import styled from 'styled-components'
-import { palette } from 'Theme'
+import { palette, bp } from 'Theme'
 
 export const Container = styled.div`
   display: flex;
   padding: 50px 0;
   border-bottom: 1px solid ${palette.gallery};
+
+  @media all and (max-width: ${bp.average}px) {
+    padding: 10px 0;
+  }
 `
 export const HorizontalSpace = styled.div`
   display: flex;
@@ -23,7 +27,14 @@ export const FlexColumn = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 800px;
+  min-width: 760px;
+  padding: 0 20px;
+
+  @media all and (max-width: ${bp.average}px) {
+    min-width: initial;
+    padding: 0 40px;
+    flex-grow: 1;
+  }
 `
 export const SectionTitle = styled.h2`
   display: flex;
@@ -34,12 +45,21 @@ export const SectionTitle = styled.h2`
   font-weight: normal;
   font-style: italic;
   margin-bottom: 30px;
+  @media all and (max-width: ${bp.average}px) {
+    font-size: 35px;
+  }
 `
 export const Text = styled.div`
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 1px;
+  @media all and (max-width: ${bp.average}px) {
+    font-size: 18px;
+  }
 `
 export const Li = styled.li`
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 1px;
+  @media all and (max-width: ${bp.average}px) {
+    font-size: 18px;
+  }
 `

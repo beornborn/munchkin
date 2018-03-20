@@ -1,17 +1,17 @@
 {
-  "name": "react_template",
+  "name": "munchkin-kiev",
   "version": "0.0.1",
   "private": true,
   "main": "index.js",
   "repository": {
-    "url": "git@github.com:beornborn/react_template.git",
+    "url": "git@github.com:beornborn/munchkin.git",
     "type": "git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/nightwatch",
     "local": "webpack-dev-server --config webpack.local.config.js",
-    "prod": "webpack -p --config webpack.prod.config.js --progress --colors",
-    "deploy": "npm run prod && surge -p dist",
+    "build": "webpack -p --config webpack.prod.config.js --progress --colors",
+    "deploy": "s3-deploy './dist/**' --cwd './dist/' --region eu-central-1 --bucket munchkin.kiev.ua --gzip",
+    "release": "npm run build && npm run deploy",
     "flow_install": "flow-typed install",
     "flow": "./node_modules/.bin/flow",
     "eslint": "eslint --format 'node_modules/eslint-friendly-formatter' ./app",
@@ -64,6 +64,7 @@
     "flow-typed": "^2.1.1",
     "json-loader": "^0.5.4",
     "node-sass": "^4.5.2",
+    "s3-deploy": "^0.10.0",
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
