@@ -7,6 +7,8 @@ export const palette = {
   aliceblue: 'aliceblue',
   text: '#363636',
   link: '#2e91f3',
+  persimmon: '#ff5555',
+  white: '#ffffff',
 }
 
 // breakpoints

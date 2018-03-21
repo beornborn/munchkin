@@ -11,6 +11,18 @@ export const Container = styled.div`
     padding: 10px 0;
   }
 `
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 760px;
+  padding: 0 20px;
+
+  @media all and (max-width: ${bp.average}px) {
+    min-width: initial;
+    padding: 0 40px;
+    flex-grow: 1;
+  }
+`
 export const HorizontalSpace = styled.div`
   display: flex;
   width: 100%;
@@ -23,18 +35,6 @@ export const FlexRow = styled.div`
 export const FlexColumn = styled.div`
   display: flex;
   flex-direction: column;
-`
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-width: 760px;
-  padding: 0 20px;
-
-  @media all and (max-width: ${bp.average}px) {
-    min-width: initial;
-    padding: 0 40px;
-    flex-grow: 1;
-  }
 `
 export const SectionTitle = styled.h2`
   display: flex;

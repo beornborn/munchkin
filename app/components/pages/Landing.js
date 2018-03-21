@@ -1,6 +1,7 @@
 //@flow
 import React from 'react'
 import Header from 'components/pages/Header'
+import Screen0 from 'components/pages/0_Screen'
 import Screen1 from 'components/pages/1_Screen'
 import Screen2 from 'components/pages/2_Screen'
 import Screen3 from 'components/pages/3_Screen'
@@ -15,6 +16,7 @@ export default class Landing extends React.Component {
     return <Container>
       <Header />
       <HorizontalSpace height={37} />
+      <Screen0 />
       <Screen1 />
       <Screen2 />
       <Screen3 />
