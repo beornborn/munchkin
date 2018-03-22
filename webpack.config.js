@@ -1,12 +1,13 @@
 var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: ['babel-polyfill', 'whatwg-fetch', './app/Root'],
   output: {
     path: path.join(__dirname, './dist'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.[chunkhash].js'
   },
   module: {
     rules: [
@@ -34,6 +35,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: 'dist/templates/index.html'
+    }),
     new ExtractTextPlugin('styles.css')
   ],
   resolve: {

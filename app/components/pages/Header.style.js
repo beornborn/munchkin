@@ -36,7 +36,7 @@ export const Item = styled.div`
     padding: 10px 5px;
   }
 `
-export const Email = styled.div`
+export const Phone = styled.div`
   display: flex;
   padding: 10px;
   flex-grow: 3;
@@ -45,7 +45,7 @@ export const Email = styled.div`
     display: none;
   }
 `
-export const EmailLink = styled.a`
+export const PhoneLink = styled.a`
   text-decoration: none;
   color: ${palette.link};
 `

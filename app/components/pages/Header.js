@@ -1,7 +1,7 @@
 //@flow
 import React from 'react'
 import pt from 'prop-types'
-import { OverContainer, Container, Item, Items, Email, EmailLink, NavigationLink, NavigationLinkRoute } from './Header.style'
+import { OverContainer, Container, Item, Items, Phone, PhoneLink, NavigationLink, NavigationLinkRoute } from './Header.style'
 
 export default class Header extends React.Component {
   static propTypes = {
@@ -43,9 +43,9 @@ export default class Header extends React.Component {
     return <OverContainer>
       <Container>
         {type === 'landing' ? this.landingNav() : this.articleNav()}
-        <Email>
-          <EmailLink href='mailto:munchkin.kiev@gmail.com'>munchkin.kiev@gmail.com</EmailLink>
-        </Email>
+        <Phone>
+          <PhoneLink href='tel:+380937819824'>+380937819824</PhoneLink>
+        </Phone>
       </Container>
     </OverContainer>
   }
